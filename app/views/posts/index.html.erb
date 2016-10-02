@@ -1,0 +1,5 @@
+<%= content_tag(:p, @posts.length.to_s + ' total posts in the last 48 hours') %>
+<% @posts.each do |post| %>
+  <%= link_to('SHOW', post_path(post)) %>
+  <%= render post %>
+<% end %>

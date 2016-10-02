@@ -1,0 +1,10 @@
+<%= content_tag(:p, 'Position: ') %>
+<%= content_tag(:p, @position) %>
+<%= content_tag(:p, 'Header Block: ') %>
+<% @header_block.each do |line| %>
+  <%= content_tag(:span, line) %>
+  <br>
+<% end %>
+
+<%= content_tag(:p, 'Paragraph: ') %>
+<%= content_tag(:p, @intro_paragraph) %>

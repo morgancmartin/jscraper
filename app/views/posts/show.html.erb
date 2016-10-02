@@ -1,0 +1,20 @@
+<%= render @post %>
+
+
+<form action="<%= cover_letter_path %>">
+  <input type="hidden" name="position" value="<%= @post.title %>">
+  <p>Company Name:</p>
+  <input type="text" name="company" value="<%= @post.company %>">
+  <br>
+  <p>Address:</p>
+  <textarea type="text" name="address" value=""></textarea>
+  <br>
+  <%= content_tag(:p, "#{@post.company} caught my attention because...") %>
+  <p>Reasons:</p>
+  <textarea type="text" name="reasons" value=""></textarea>
+  <br>
+  <p>Board:</p>
+  <input type="text" name="board" value="Indeed">
+  <br>
+  <input type="submit">
+</form>
